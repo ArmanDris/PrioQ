@@ -53,14 +53,14 @@ function App() {
   return (
     <div>
       <h1>Prio Q</h1>
-      
+      <p>Items are sorted by their numeric characters. Items with the same number stay in the order they were added</p>      
       {/* Input field for adding new items, listens for Enter key press */}
       <input
         type="text"
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
         onKeyDown={handleKeyPress} // Call handleKeyPress on key down
-        placeholder="Enter a new to-do item"
+        placeholder="SABC 4"
         style={{padding: '8px'}}
       />
       <button onClick={addItem}>Add</button>
