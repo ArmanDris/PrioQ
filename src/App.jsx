@@ -53,14 +53,15 @@ function App() {
   return (
     <div>
       <h1>Prio Q</h1>
-      <p>Items are sorted by their numeric characters. Items with the same number stay in the order they were added</p>      
+      <p> Sorts items by stripping any non-numeric characters, then sorts them in ascending order.</p>
+      <p>There is no automatic alphabetical ordering, so make sure to add items in alphabetical order manually.</p>
       {/* Input field for adding new items, listens for Enter key press */}
       <input
         type="text"
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
         onKeyDown={handleKeyPress} // Call handleKeyPress on key down
-        placeholder="SABC 4"
+        placeholder="<PATH> <NUMBER>"
         style={{padding: '8px'}}
       />
       <button onClick={addItem}>Add</button>
