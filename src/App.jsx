@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [toDoList, setToDoList] = useState([]); // State to store to-do items
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <div>
+      <Analytics/>
       <h1>Prio Q</h1>
       <p> Sorts items by stripping any non-numeric characters, then sorts them in ascending order.</p>
       <p>There is no automatic alphabetical ordering, so make sure to add items in alphabetical order manually.</p>
